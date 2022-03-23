@@ -5,3 +5,31 @@
           will be a one-stop-shop for spending,saving,<br />budgeting,investing,
           and much more.</p>
             </div>
+
+
+
+
+
+
+
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 60px;
+}
+
+.content p{
+    margin: 20x auto;
+    font-weight: 100;
+    line-height: 50px;
+    font-size: 28px;
+}
