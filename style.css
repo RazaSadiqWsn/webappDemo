@@ -1,0 +1,123 @@
+
+
+.full-page
+{
+    background: lightgrey;
+
+}
+
+.bg-image{
+  height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(bankHome.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    filter: blur(6px);
+  -webkit-filter: blur(15px);
+
+
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: underline;
+    font-size: 20px;
+    color: blueviolet;
+    font-family: sans-serif;
+}
+nav ul li button
+{
+    font-size: 20px;
+    color: red;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    color: red;
+}
+nav ul li a:hover
+{
+    color: red;
+}
+a
+{
+    text-decoration: none;
+    color: red;
+    font-size: 28px;
+}
+
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.quote{
+
+  transform: translateY(10%);
+  vertical-align: center;
+  padding-left: px;
+  padding-top: -20px;
+
+
+}
+
+.footer
+{
+  padding-top: 320px;
+  font-size: 5px;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 40px;
+}
+
+.content p{
+    margin: 2x auto;
+    font-weight: 100;
+    font-size: 14px;
+    padding: 10px;
+    border: blue;
+    align-content: center;
+    text-align: center;
+}
+ul li a.active-page
+{
+  background-color:green;
+  color: white;
+  padding: 10px;
+  text-underline-position: under;
+}

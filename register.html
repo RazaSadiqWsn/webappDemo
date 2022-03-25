@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+		OUR Bank Sign Up
+	</title>
+
+	<style type="text/css">
+		
+
+.full-page
+{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(bank.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+
+    align-content: center;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+} 
+
+.bg-image {
+  background-image: url("bankHome.jpg");
+  filter: blur(20px);
+  -webkit-filter: blur(8px);
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+		h2 {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		margin: 0;
+		text-align: center;
+		color: purple;
+		background: slateblue ;
+	}
+	.title_container {
+		text-align: center;
+		padding-bottom: 15px;
+	}
+	h3 {
+		font-size: 1.1em;
+		font-weight: normal;
+		line-height: 1.5em;
+		margin: 0;
+	}
+    label {
+        font-size: 12px;
+    }
+	.row {
+		margin: 10px -15px;
+			padding: 0 15px;
+			box-sizing: border-box;
+	}
+
+	.input_field {
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	 
+
+  .button{
+  	color: white;
+  	background: purple;
+  	margin: 5px;
+  }
+
+
+
+
+
+
+
+
+	</style>
+
+
+</head>
+<body>
+
+
+
+	<div class="top">
+      <h2>Register to OUR Net Banking</h2><hr>
+    </div>
+    <div class="bg-image"></div>
+      <div class="full-page">
+      	<fieldset align=center>
+        <form action="regSuccess.html">
+        	<h3>Please Fill below details to sign up</h3>
+        	            <div class="col_half">
+                <input type="text" name="name" placeholder="First Name" /><br><br>
+              </div>
+            <div class="col_half">
+                <input type="text" name="name" placeholder="Last Name" required /><br><br>
+              </div>
+            <input type="email" name="email" placeholder="Email" required /><br><br>
+            <input type="password" name="password" placeholder="Password" required /><br><br>
+            <input type="password" name="password" placeholder="Re-type Password" required /><br><br>
+          
+
+            	
+            	<div class="input_field radio_option">
+              <input type="radio" name="radiogroup1" id="rd1">
+              <label for="rd1" style="color:yellowgreen;">Male</label>
+              <input type="radio" name="radiogroup1" id="rd2">
+              <label for="rd2" style="color:yellowgreen;">Female</label>
+              </div>
+              <div >
+                <select>
+                  <option>Account Type</option>	
+                  <option>Saving</option>
+                  <option>Current</option>
+                </select>
+              </div>
+            <div >
+            	<input type="checkbox" id="cb1">
+    			<label for="cb1" style="color:brown;">I agree with terms and conditions</label>
+            </div>
+            <div >
+            	<input type="checkbox" id="cb2">
+    			<label for="cb2" style="color:brown;">I want to receive the newsletter</label><br>
+            </div>
+            <br><br>
+          <input class="button" type="submit" value="Register" />
+        </form>
+        </fieldset>
+	</div>
+<p class="credit">Sign Up to OUR bank and enjoy one of the best banking services</a></p>
+
+</body>
+</html>
+
+
+

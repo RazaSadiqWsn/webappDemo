@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Our Bank Loan</title>
+
+
+	<style type="text/css">
+		
+
+
+.full-page
+{
+    background: lightgrey;
+
+}
+
+.bg-image{
+  height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(bankHome.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    filter: blur(6px);
+  -webkit-filter: blur(15px);
+
+
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul 
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a
+{
+    text-decoration: underline;
+    font-size: 20px;
+    color: blueviolet;
+    font-family: sans-serif;
+}
+
+nav ul li a:hover
+{
+    color: red;
+}
+a
+{
+    text-decoration: none;
+    color: red;
+    font-size: 28px;
+}
+
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.quote{
+
+  transform: translateY(-80%);
+  padding-top: 100px;
+
+  position: absolute;
+
+
+}
+ul li a.active-page
+{
+  background-color:green;
+  color: white;
+  padding: 10px;
+  text-underline-position: under;
+}
+
+.footer
+{
+  padding-top: 320px;
+  font-size: 5px;
+}
+.content h4{
+    font-size: 15px;
+    margin-top: 2px;
+    text-align: top;
+}
+h4{
+	text-align: center;
+	color: black;
+}
+
+.status{
+	align-content: center;
+	text-align: center;
+	color: blue;
+}
+.loan-form{
+	align-content: left;
+	text-align: right;
+	width: 100%;
+  clear: both;
+	align-items: flex-start;
+}
+
+
+
+
+	</style>
+
+	<script type="text/javascript">
+		
+
+		function updateType(type) {
+			//alert("update is called"+document.getElementById('type').value)
+            	var options = "<option> Select Duration </option>";
+            	//var type = document.getElementById("type").value;
+            	
+            	//document.write("<br> typei : " +type)
+            	document.getElementById("emi").value=null;
+            	var start =1,end=25,total=0
+
+            	if(type=="Home")
+            	{
+            		end=25;
+            		roi.value=7
+            		
+            	}
+            	else if(type=="Car")
+            	{
+            		end=7
+            		roi.value=9;
+            	
+            	}
+            	else
+        			{
+        				start =3;
+        				end=5;
+        				roi.value=12
+        			}
+				for(var year = start ; year <=end; year++)
+				{
+    				options += "<option>"+ year +"</option>";
+				}
+				document.getElementById("duration").innerHTML = options;
+		}
+
+		function updateEmi(duration) {
+			var amount = Number(document.getElementById("amount").value);
+			var roi = Number(document.getElementById("roi").value);
+            	var total=amount+ (amount*roi*duration)/100
+
+        		emi.value = parseFloat(total/(duration*12)).toFixed(2)
+        		//alert(total+" "+amount+" "+emi.value)
+		}
+
+		var flag=true
+		function display()
+			{
+				var tc = `
+						<h2>Here are Terms and Conditions</h2>
+						
+							<h3>
+								Please go through and select the cehckbox...
+							<br>
+							
+							</h3>		
+							
+						`
+				if(flag)
+				{
+					document.getElementById("d1").innerHTML = tc;
+					document.getElementById("tandc").innerText = "Seen";
+					document.getElementById("tandc").style.color = "GREEN";
+				}
+				else
+				{
+					document.getElementById("d1").innerText = "";
+					document.getElementById("tandc").innerText = "Check Again...";
+
+				}
+				flag = !flag;
+			}
+
+            function applied() {
+                alert("The form was submitted");            }
+	</script>
+
+
+
+
+</head>
+<body>
+<div class="full-page">
+    <div>
+        <nav>
+            
+            <ul id="navItems">
+                <li><a  href="index.html">Home</a></li> 
+                <li><a class="active-page" href="loanservice.html">Loan Service</a></li> 
+                <li><a href="login.html">Net Banking</a></li>
+                <li><a href="about.html">About us</a></li>  
+                <li><a href="contact.html">Contact Us</a></li> 
+            </ul>
+        </nav>
+        <div class ="quote">
+        <img src="rbi.svg" alt="Quote from Bill Gates " style="width:200px;height:85px;">
+        </div>
+        <div> <h4 >Get Instant Loan. Apply Now !</div>
+    </div>
+               
+
+    
+
+
+
+    <div class="loan-form">
+      	<fieldset align=center>
+        <form action=>
+        	<h3>Please Fill below details to apply for Loan</h3>
+                Applicant Name : <input type="text" id="name" placeholder="Name" required minlength="3" /><br><br>
+            Amount : <input type="number" id="amount" placeholder="Amount" required  min=100000  /><br><br>
+            <div >
+                Type  :<select id="type" onchange="updateType(this.value)"> 
+                  <option>Loan Type</option>	
+                  <option>Home</option>	
+                  <option>Car</option>
+                  <option>Personal Loan</option>
+                </select><br><br>
+     
+            ROI : <input type="number" id="roi" placeholder="ROI" disabled /><br><br>
+           <!-- Duration : <input type="number" name="dur" id="duration" placeholder="Duration" required /><br><br><br>-->
+            Duration (Yrs) : <select name="dur" id="duration" placeholder="Duration" required onchange="updateEmi(this.value)"> Duration </select><br><br>
+            <span>
+            	
+            </span>
+
+            EMI : <input type="number" id="emi" placeholder="emi" disabled step="2" /><br><br>
+              
+              </div>
+            <div >
+            	<input type="checkbox" id="cb1" required>
+    			<label for="cb1" style="color:brown;">I agree with terms and conditions  </label>
+    			<h4 onclick="display()"  id="tandc">Check terms and Conditions </h4>
+            </div>
+            <br><br>
+          <input class="button" type="submit" value="Apply" ; onsubmit="applied()"  />
+        </form>
+        </fieldset>
+	</div>
+
+        
+
+    
+</div>
+<hr>
+<div class="status" id="d1"></div>
+<div class="footer">
+<footer>
+  <marquee><p><a href="demo.com">Reach out to us at : ourbankour@outlook.com</a></p></marquee>
+</footer>
+</div>
+   
+
+</body>
+</html>
