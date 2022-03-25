@@ -207,7 +207,7 @@ h4{
 			}
 
             function applied() {
-                alert("The form was submitted");            }
+                alert("Loan Applied Successfully ! :) ");            }
 	</script>
 
 
@@ -240,7 +240,7 @@ h4{
 
     <div class="loan-form">
       	<fieldset align=center>
-        <form action=>
+        <form onsubmit="applied()">
         	<h3>Please Fill below details to apply for Loan</h3>
                 Applicant Name : <input type="text" id="name" placeholder="Name" required minlength="3" /><br><br>
             Amount : <input type="number" id="amount" placeholder="Amount" required  min=100000  /><br><br>
@@ -268,7 +268,7 @@ h4{
     			<h4 onclick="display()"  id="tandc">Check terms and Conditions </h4>
             </div>
             <br><br>
-          <input class="button" type="submit" value="Apply" ; onsubmit="applied()"  />
+          <input class="button" type="submit" value="Apply" ; />
         </form>
         </fieldset>
 	</div>
